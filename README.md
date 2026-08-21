@@ -101,7 +101,7 @@ meditrack/
 🔐 Authentication Flow
 
 MediTrack uses JWT authentication with an HttpOnly cookie.
-
+```mermaid
 flowchart TD
     A[User] --> B[React Login/Register Form]
     B --> C[Express Authentication API]
@@ -112,13 +112,13 @@ flowchart TD
     G --> H[Authenticated Requests]
     H --> I[Protected Routes]
     I --> J[Dashboard / Staff Panel]
-
+```
 The authentication flow prevents the JWT from being directly accessed by client-side JavaScript because the authentication token is stored in an HttpOnly cookie.
 
 ---
 
 📊 System Architecture
-
+```mermaid
 flowchart LR
     A[React + Vite] --> B[Redux Toolkit]
     B --> C[Axios]
@@ -133,8 +133,10 @@ flowchart LR
     G --> H
 
     H --> I[MongoDB]
+```
 
 ---
+
 
 🔗 API Routes
 
@@ -157,22 +159,22 @@ PATCH| "/api/staff/appointments/:id/status"| Staff only
 Screenshots of the completed application can be placed in the "screenshots/" folder.
 
 🔑 Login
-![MediTrack Login](screenshots/sign in page.png)
+![MediTrack Login](screenshots/sign%20in%20page.png)
 
 
 📝 Register
-![MediTrack Register](screenshots/register page.png)
+![MediTrack Register](screenshots/register%20page.png)
 
 
 📅 Patient Dashboard
-![Patient Dashboard](screenshots/after registered.png)
-![Patient Dashboard](screenshots/successfully booking appointment.png)
+![Patient Dashboard](screenshots/after%20registered.png)
+![Patient Dashboard](screenshots/successfully%20booking%20appointment.png)
 
 
 👩‍⚕️ Staff Panel
-![staff Panel ](screenshots/register and sign in as staff after change role in mongodb.png)
-![Staff Panel](clinic schedule.png)
-![Staff Panel](screenshots/checking clinic schedule.png)
+![staff Panel ](screenshots/register%20and%20sign%20in%20as%20staff%20after%20change%20role%20in%20mongodb.png)
+![Staff Panel](screenshots/clinic%20schedule.png)
+![Staff Panel](screenshots/checking%20clinic%20schedule.png)
 
 
 
