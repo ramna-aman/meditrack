@@ -101,39 +101,17 @@ meditrack/
 🔐 Authentication Flow
 
 MediTrack uses JWT authentication with an HttpOnly cookie.
-```mermaid
-flowchart TD
-    A[User] --> B[React Login/Register Form]
-    B --> C[Express Authentication API]
-    C --> D[Validate User]
-    D --> E[MongoDB]
-    C --> F[JWT]
-    F --> G[HttpOnly Cookie]
-    G --> H[Authenticated Requests]
-    H --> I[Protected Routes]
-    I --> J[Dashboard / Staff Panel]
+
+**Authentication Flow**
+```text
+User → React Login/Register → Express API → MongoDB → JWT → HttpOnly Cookie → Protected Routes → Dashboard/Staff Panel
 ```
 The authentication flow prevents the JWT from being directly accessed by client-side JavaScript because the authentication token is stored in an HttpOnly cookie.
 
 ---
 
 📊 System Architecture
-```mermaid
-flowchart LR
-    A[React + Vite] --> B[Redux Toolkit]
-    B --> C[Axios]
-    C --> D[Express API]
-
-    D --> E[Auth Routes]
-    D --> F[Appointment Routes]
-    D --> G[Staff Routes]
-
-    E --> H[Authentication Middleware]
-    F --> H
-    G --> H
-
-    H --> I[MongoDB]
-```
+React + Vite → Redux Toolkit → Axios → Express API → Authentication Middleware → MongoDB
 
 ---
 
